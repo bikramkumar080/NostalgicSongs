@@ -16,6 +16,38 @@ const songs = [
     illustrationDesktop: "assets/illustrations/Desktop.png",
     illustrationMobile:  "assets/illustrations/Mobile.png",
   },
+  {
+    id: "song-03",
+    title: "Dil Ne Yeh Kaha Hain Dil Se",
+    artist: "Udit Narayan, Alka Yagnik",
+    audioUrl: "assets/songs/song-03.mp3",
+    illustrationDesktop: "assets/illustrations/Desktop.png",
+    illustrationMobile:  "assets/illustrations/Mobile.png",
+  },
+  {
+    id: "song-04",
+    title: "Tum Dil Ki Dhadkan Mein",
+    artist: "Abhijeet, Alka Yagnik",
+    audioUrl: "assets/songs/song-04.mp3",
+    illustrationDesktop: "assets/illustrations/Desktop.png",
+    illustrationMobile:  "assets/illustrations/Mobile.png",
+  },
+  {
+    id: "song-05",
+    title: "Tum Dil Ki Dhadkan Mein",
+    artist: "Kumar Sanu",
+    audioUrl: "assets/songs/song-05.mp3",
+    illustrationDesktop: "assets/illustrations/Desktop.png",
+    illustrationMobile:  "assets/illustrations/Mobile.png",
+  },
+  {
+    id: "song-06",
+    title: "Aksar Is Duniya Mein",
+    artist: "Alka Yagnik",
+    audioUrl: "assets/songs/song-06.mp3",
+    illustrationDesktop: "assets/illustrations/Desktop.png",
+    illustrationMobile:  "assets/illustrations/Mobile.png",
+  },
 ];
 
 // ── Player state ─────────────────────────────────────────────────────────────
