@@ -21,13 +21,33 @@ const songs = [
   { id: "song-19", title: "Saajanji Ghar Aaye",                  artist: "Alka Yagnik, Kumar Sanu",                         audioUrl: "assets/songs/song-19.mp3" },
   { id: "song-20", title: "Tujhe Dekha To",                      artist: "Lata Mangeshkar, Kumar Sanu",                     audioUrl: "assets/songs/song-20.mp3" },
   { id: "song-21", title: "Ye Kaali Kaali Aankhen",              artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-21.mp3" },
+  { id: "song-22", title: "Aankh Hai Bhari Bhari",               artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-22.mp3" },
+  { id: "song-23", title: "Aankhon Mein Base Ho Tum",            artist: "Abhijeet, Alka Yagnik",                           audioUrl: "assets/songs/song-23.mp3" },
+  { id: "song-24", title: "Aaye Ho Meri Zindagi Mein",           artist: "Udit Narayan",                                    audioUrl: "assets/songs/song-24.mp3" },
+  { id: "song-25", title: "Ab Tere Bin",                         artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-25.mp3" },
+  { id: "song-26", title: "Chand Se Parda Kijiye",               artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-26.mp3" },
+  { id: "song-27", title: "Chura Ke Dil Mera",                   artist: "Anu Malik, Alka Yagnik, Kumar Sanu",              audioUrl: "assets/songs/song-27.mp3" },
+  { id: "song-28", title: "Dhak Dhak Karne Laga",                artist: "Udit Narayan, Anuradha Paudwal",                  audioUrl: "assets/songs/song-28.mp3" },
+  { id: "song-29", title: "Dheere Dheere Se Meri Zindagi Mein Aana", artist: "Anuradha Paudwal, Kumar Sanu",               audioUrl: "assets/songs/song-29.mp3" },
+  { id: "song-30", title: "Jo Bhi Kasmein",                      artist: "Alka Yagnik, Udit Narayan",                       audioUrl: "assets/songs/song-30.mp3" },
+  { id: "song-31", title: "Kitna Haseen Chehra",                 artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-31.mp3" },
+  { id: "song-32", title: "Kya Karte They Sajna",                artist: "Udit Narayan, Anuradha Paudwal",                  audioUrl: "assets/songs/song-32.mp3" },
+  { id: "song-33", title: "Kya Mujhe Pyaar Hai",                 artist: "KK",                                              audioUrl: "assets/songs/song-33.mp3" },
+  { id: "song-34", title: "Mera Chand Mujhe Aaya Hai Nazar",     artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-34.mp3" },
+  { id: "song-35", title: "Mera Mann",                           artist: "Udit Narayan, Alka Yagnik",                       audioUrl: "assets/songs/song-35.mp3" },
+  { id: "song-36", title: "Nazar Ke Samne",                      artist: "Anuradha Paudwal, Kumar Sanu",                    audioUrl: "assets/songs/song-36.mp3" },
+  { id: "song-37", title: "Odh Li Chunariya Tere Naam Ki",       artist: "Kumar Sanu, Alka Yagnik",                         audioUrl: "assets/songs/song-37.mp3" },
+  { id: "song-38", title: "Sathiya Mujhe Neend Na Aaye Aajkal",  artist: "Suresh Wadkar, Anuradha Paudwal",                 audioUrl: "assets/songs/song-38.mp3" },
+  { id: "song-39", title: "Tere Bin",                            artist: "Atif Aslam",                                      audioUrl: "assets/songs/song-39.mp3" },
+  { id: "song-40", title: "Tu Mile Dil Khile",                   artist: "Kumar Sanu, Alka Yagnik",                         audioUrl: "assets/songs/song-40.mp3" },
+  { id: "song-41", title: "Woh Ladki Bahut Yaad Aati",           artist: "Kumar Sanu, Alka Yagnik",                         audioUrl: "assets/songs/song-41.mp3" },
 ];
 
 // ── Illustration pool ─────────────────────────────────────────────────────────
 // Each entry has `desktop` and `mobile` src. For images that work on both,
 // both fields point to the same file.
 const illustrationPool = [
-  { desktop: "assets/illustrations/illus-kerala-bus-desktop.png", mobile: "assets/illustrations/illus-kerala-bus-mobile.png" }
+  { desktop: "assets/illustrations/illus-kerala-bus-desktop.png", mobile: "assets/illustrations/illus-kerala-bus-mobile.png" },
 ];
 
 // Shuffle once on page load so every visit is different
