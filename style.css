@@ -14,8 +14,125 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
 }
+
+body {
+  overflow-x: hidden;
+  background: #b98a5e;
+  font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+/* ════════════════════════════════════════
+   LANDING SCREEN
+   Full-screen illustrated background with the
+   branding baked in. Cards float over the
+   bottom ~62% (the open-road portion).
+════════════════════════════════════════ */
+.landing[hidden] { display: none; }
+
+.landing {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url('assets/illustrations/Landing page.png');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 2rem 3.5vh;
+}
+
+.mood-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+  max-width: 1040px;
+  /* sit in the lower part of the scene */
+  margin-top: 46vh;
+}
+
+/* ── mood card ── */
+.mood-card {
+  position: relative;
+  overflow: hidden;
+  border: none;
+  cursor: pointer;
+  border-radius: 14px;
+  min-height: 140px;
+  padding: 1rem 1.1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 0.25rem;
+  text-align: left;
+  color: #fdfaf3;
+  font-family: inherit;
+  box-shadow: 0 10px 28px rgba(40,26,12,0.28);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mood-card::after {
+  /* darken bottom for text legibility */
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 55%, rgba(0,0,0,0) 100%);
+  pointer-events: none;
+}
+
+.mood-card > * { position: relative; z-index: 1; }
+
+.mood-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(40,26,12,0.38);
+}
+
+.mood-card:active { transform: translateY(-1px); }
+
+.mood-card-emoji {
+  font-size: 1.6rem;
+  line-height: 1;
+  margin-bottom: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.4));
+}
+
+.mood-card-name {
+  font-size: 1.15rem;
+  font-weight: bold;
+  letter-spacing: 0.01em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.5);
+}
+
+.mood-card-tagline {
+  font-size: 0.78rem;
+  font-style: italic;
+  color: rgba(253,250,243,0.85);
+  text-shadow: 0 1px 5px rgba(0,0,0,0.5);
+  line-height: 1.35;
+}
+
+/* ── scenes (gradient placeholders — swap for real art later) ── */
+.scene-rain     { background: linear-gradient(150deg, #3a4a5c 0%, #566b7d 55%, #7d94a4 100%); }
+.scene-road     { background: linear-gradient(150deg, #6b7f4e 0%, #9caf6a 50%, #d8c48a 100%); }
+.scene-retro    { background: linear-gradient(150deg, #7a4a34 0%, #b0714a 55%, #d9a86a 100%); }
+.scene-party    { background: linear-gradient(150deg, #6a2f5c 0%, #b0426a 50%, #e8894a 100%); }
+.scene-love     { background: linear-gradient(150deg, #8a3a5a 0%, #c66a76 50%, #f0a878 100%); }
+.scene-midnight { background: linear-gradient(150deg, #1e2440 0%, #35406b 55%, #5a5f8c 100%); }
+.scene-city     { background: linear-gradient(150deg, #241a3a 0%, #4a3a72 50%, #8a5aa0 100%); }
+.scene-surprise {
+  background: linear-gradient(135deg, #8a5a2a 0%, #b98a4a 50%, #d8b06a 100%);
+  border: 1.5px dashed rgba(253,250,243,0.6);
+}
+
+/* ════════════════════════════════════════
+   PLAYER SCREEN
+════════════════════════════════════════ */
+.stage[hidden] { display: none; }
 
 /* ── fullscreen wallpaper ── */
 .wallpaper {
@@ -40,6 +157,29 @@ html, body {
   display: flex;
   align-items: flex-end;
 }
+
+/* ── back button ── */
+.back-btn {
+  position: absolute;
+  top: -0.5rem;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background: none;
+  border: none;
+  color: var(--ink-muted);
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.3rem 0;
+  transition: color 0.2s;
+}
+
+.back-btn:hover { color: var(--ink); }
+.back-btn svg { width: 14px; height: 14px; }
 
 /* ── gradient scrim at bottom ── */
 .stage::before {
@@ -212,7 +352,45 @@ html, body {
 }
 
 /* ── mobile ── */
+/* ════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════ */
+@media (max-width: 900px) {
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 560px;
+    margin-top: 40vh;
+  }
+}
+
 @media (max-width: 480px) {
+  /* landing: full portrait image on top, cards scroll below it */
+  .landing {
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url('assets/illustrations/Landing page mobile.png');
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding: 0 1rem 2rem;
+  }
+
+  .mood-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+    /* push cards below the full portrait hero (its aspect ratio is ~9:16) */
+    margin-top: 152vw;
+  }
+
+  .mood-card {
+    min-height: 118px;
+    padding: 0.8rem 0.85rem 0.9rem;
+  }
+
+  .mood-card-emoji { font-size: 1.35rem; }
+  .mood-card-name { font-size: 1rem; }
+  .mood-card-tagline { font-size: 0.72rem; }
+
   .player {
     padding: 1.5rem 1.5rem 2.5rem;
     gap: 1.6rem;

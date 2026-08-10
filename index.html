@@ -3,19 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nostalgic Feeling</title>
+  <title>RoadTunes — Music for wherever your mind is going.</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- ══ Landing screen ══ -->
+  <div class="landing" id="landing">
+    <div class="mood-grid" id="mood-grid">
+      <!-- cards injected by app.js -->
+    </div>
+  </div>
+
+  <!-- ══ Player screen ══ -->
   <div class="wallpaper" id="wallpaper"></div>
 
-  <main class="stage">
-
+  <main class="stage" id="stage" hidden>
     <div class="player">
 
+      <button class="back-btn" id="btn-back" title="Choose another mood" aria-label="Choose another mood">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+        <span id="back-label">Change mood</span>
+      </button>
+
       <div class="song-info">
-<h1 class="song-title" id="song-title">Press play</h1>
+        <h1 class="song-title" id="song-title">Press play</h1>
         <p class="artist-name" id="artist-name">to begin the journey</p>
       </div>
 
@@ -57,7 +71,6 @@
       </div>
 
     </div>
-
   </main>
 
   <audio id="audio"></audio>
