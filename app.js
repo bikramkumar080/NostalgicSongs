@@ -1,65 +1,62 @@
-// ── Song catalogue ───────────────────────────────────────────────────────────
+// ── Song catalogue ────────────────────────────────────────────────────────────
 const songs = [
-  {
-    id: "song-01",
-    title: "Kuchh Na Kaho",
-    artist: "R. D. Burman",
-    audioUrl: "assets/songs/song-01.mp3",
-    illustrationDesktop: "assets/illustrations/Desktop.png",
-    illustrationMobile:  "assets/illustrations/Mobile.png",
-  },
-  {
-    id: "song-02",
-    title: "Ek Ladki Ko Dekha",
-    artist: "Kumar Sanu",
-    audioUrl: "assets/songs/song-02.mp3",
-    illustrationDesktop: "assets/illustrations/Desktop.png",
-    illustrationMobile:  "assets/illustrations/Mobile.png",
-  },
-  {
-    id: "song-03",
-    title: "Dil Ne Yeh Kaha Hain Dil Se",
-    artist: "Udit Narayan, Alka Yagnik",
-    audioUrl: "assets/songs/song-03.mp3",
-    illustrationDesktop: "assets/illustrations/Desktop.png",
-    illustrationMobile:  "assets/illustrations/Mobile.png",
-  },
-  {
-    id: "song-04",
-    title: "Tum Dil Ki Dhadkan Mein",
-    artist: "Abhijeet, Alka Yagnik",
-    audioUrl: "assets/songs/song-04.mp3",
-    illustrationDesktop: "assets/illustrations/Desktop.png",
-    illustrationMobile:  "assets/illustrations/Mobile.png",
-  },
-  {
-    id: "song-05",
-    title: "Tum Dil Ki Dhadkan Mein",
-    artist: "Kumar Sanu",
-    audioUrl: "assets/songs/song-05.mp3",
-    illustrationDesktop: "assets/illustrations/Desktop.png",
-    illustrationMobile:  "assets/illustrations/Mobile.png",
-  },
-  {
-    id: "song-06",
-    title: "Aksar Is Duniya Mein",
-    artist: "Alka Yagnik",
-    audioUrl: "assets/songs/song-06.mp3",
-    illustrationDesktop: "assets/illustrations/Desktop.png",
-    illustrationMobile:  "assets/illustrations/Mobile.png",
-  },
+  { id: "song-01", title: "Kuchh Na Kaho",                      artist: "R. D. Burman",                                    audioUrl: "assets/songs/song-01.mp3" },
+  { id: "song-02", title: "Ek Ladki Ko Dekha",                   artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-02.mp3" },
+  { id: "song-03", title: "Dil Ne Yeh Kaha Hain Dil Se",         artist: "Udit Narayan, Alka Yagnik",                       audioUrl: "assets/songs/song-03.mp3" },
+  { id: "song-04", title: "Tum Dil Ki Dhadkan Mein",             artist: "Abhijeet, Alka Yagnik",                           audioUrl: "assets/songs/song-04.mp3" },
+  { id: "song-05", title: "Tum Dil Ki Dhadkan Mein",             artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-05.mp3" },
+  { id: "song-06", title: "Aksar Is Duniya Mein",                artist: "Alka Yagnik",                                     audioUrl: "assets/songs/song-06.mp3" },
+  { id: "song-07", title: "Aankhon Se Tune Kya Keh Diya",        artist: "Kumar Sanu, Alka Yagnik",                         audioUrl: "assets/songs/song-07.mp3" },
+  { id: "song-08", title: "Bahut Pyar Karte Hai",                artist: "S. P. Balasubrahmanyam",                          audioUrl: "assets/songs/song-08.mp3" },
+  { id: "song-09", title: "Do Dil Mil Rahe Hai",                 artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-09.mp3" },
+  { id: "song-10", title: "Ghar Se Nikalte",                     artist: "Udit Narayan",                                    audioUrl: "assets/songs/song-10.mp3" },
+  { id: "song-11", title: "Ho Gaya Hai Tujhko To Pyar Sajna",   artist: "Lata Mangeshkar, Udit Narayan",                   audioUrl: "assets/songs/song-11.mp3" },
+  { id: "song-12", title: "Jeeye To Jeeye Kaise",               artist: "Kumar Sanu, S. P. Balasubrahmanyam, Anuradha Paudwal", audioUrl: "assets/songs/song-12.mp3" },
+  { id: "song-13", title: "Kuch Kuch Hota Hai",                  artist: "Udit Narayan",                                    audioUrl: "assets/songs/song-13.mp3" },
+  { id: "song-14", title: "Ladki Badi Anjani Hai",               artist: "Alka Yagnik, Kumar Sanu",                         audioUrl: "assets/songs/song-14.mp3" },
+  { id: "song-15", title: "Main Koi Aisa Geet Gaoon",            artist: "Abhijeet, Alka Yagnik",                           audioUrl: "assets/songs/song-15.mp3" },
+  { id: "song-16", title: "Mera Dil Bhi Kitna Pagal Hai",        artist: "Mamta Sharma",                                    audioUrl: "assets/songs/song-16.mp3" },
+  { id: "song-17", title: "Mere Khwabon Mein",                   artist: "Lata Mangeshkar",                                 audioUrl: "assets/songs/song-17.mp3" },
+  { id: "song-18", title: "Raja Ko Rani Se",                     artist: "Udit Narayan, Alka Yagnik",                       audioUrl: "assets/songs/song-18.mp3" },
+  { id: "song-19", title: "Saajanji Ghar Aaye",                  artist: "Alka Yagnik, Kumar Sanu",                         audioUrl: "assets/songs/song-19.mp3" },
+  { id: "song-20", title: "Tujhe Dekha To",                      artist: "Lata Mangeshkar, Kumar Sanu",                     audioUrl: "assets/songs/song-20.mp3" },
+  { id: "song-21", title: "Ye Kaali Kaali Aankhen",              artist: "Kumar Sanu",                                      audioUrl: "assets/songs/song-21.mp3" },
 ];
 
-// ── Player state ─────────────────────────────────────────────────────────────
+// ── Illustration pool ─────────────────────────────────────────────────────────
+// Each entry has `desktop` and `mobile` src. For images that work on both,
+// both fields point to the same file.
+const illustrationPool = [
+  { desktop: "assets/illustrations/illus-kerala-bus-desktop.png", mobile: "assets/illustrations/illus-kerala-bus-mobile.png" }
+];
+
+// Shuffle once on page load so every visit is different
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+const shuffledIllustrations = shuffleArray([...illustrationPool]);
+let illustrationCursor = 0;
+
+function nextIllustration() {
+  const illus = shuffledIllustrations[illustrationCursor % shuffledIllustrations.length];
+  illustrationCursor++;
+  return illus;
+}
+
+// ── Player state ──────────────────────────────────────────────────────────────
 const state = {
-  history: [],
+  history: [],      // each entry: { ...song, illustration: {desktop, mobile} }
   currentIndex: -1,
   isPlaying: false,
 };
 
-// ── DOM refs ─────────────────────────────────────────────────────────────────
+// ── DOM refs ──────────────────────────────────────────────────────────────────
 const audio         = document.getElementById("audio");
-const wallpaper     = document.getElementById("wallpaper");
+let   wallpaperEl   = document.getElementById("wallpaper");
 const elTitle       = document.getElementById("song-title");
 const elArtist      = document.getElementById("artist-name");
 const elFill        = document.getElementById("progress-fill");
@@ -73,7 +70,7 @@ const btnNext       = document.getElementById("btn-next");
 const iconPlay      = btnPlay.querySelector(".icon-play");
 const iconPause     = btnPlay.querySelector(".icon-pause");
 
-// ── Helpers ──────────────────────────────────────────────────────────────────
+// ── Helpers ───────────────────────────────────────────────────────────────────
 function formatTime(seconds) {
   if (isNaN(seconds) || seconds < 0) return "0:00";
   const m = Math.floor(seconds / 60);
@@ -85,14 +82,16 @@ function isMobile() {
   return window.matchMedia("(max-width: 480px)").matches;
 }
 
+function illusSrc(illus) {
+  return isMobile() ? illus.mobile : illus.desktop;
+}
+
 function selectRandomUnplayedSong() {
   const playedIds = new Set(state.history.map((s) => s.id));
   let pool = songs.filter((s) => !playedIds.has(s.id));
 
   if (pool.length === 0) {
-    const lastId = state.history.length
-      ? state.history[state.history.length - 1].id
-      : null;
+    const lastId = state.history.length ? state.history[state.history.length - 1].id : null;
     pool = songs.filter((s) => s.id !== lastId);
     if (pool.length === 0) pool = songs;
   }
@@ -101,36 +100,31 @@ function selectRandomUnplayedSong() {
 }
 
 // ── Wallpaper crossfade ───────────────────────────────────────────────────────
-function setWallpaper(song) {
-  const src = isMobile() ? song.illustrationMobile : song.illustrationDesktop;
+function setWallpaper(illus) {
+  const src  = illusSrc(illus);
   const next = document.createElement("div");
   next.className = "wallpaper";
-  next.style.backgroundImage = `url("${src}")`;
-  next.style.opacity = "0";
-  next.style.transition = "opacity 0.9s ease";
+  next.style.cssText = `background-image:url("${src}");opacity:0;transition:opacity 0.9s ease`;
   document.body.prepend(next);
 
-  // force reflow then fade in
-  next.getBoundingClientRect();
+  next.getBoundingClientRect(); // force reflow
   next.style.opacity = "1";
 
+  const old = wallpaperEl;
   setTimeout(() => {
-    wallpaper.remove();
+    old.remove();
     next.id = "wallpaper";
-    // reassign global ref so future calls still find it
-    Object.defineProperty(window, "wallpaper", { value: next, writable: true, configurable: true });
+    wallpaperEl = next;
   }, 950);
 }
 
 // ── Core playback ─────────────────────────────────────────────────────────────
-function playSong(song) {
-  const changingTrack = audio.src !== new URL(song.audioUrl, location.href).href;
-
+function playSong(entry) {
+  const changingTrack = audio.src !== new URL(entry.audioUrl, location.href).href;
   if (changingTrack) {
-    setWallpaper(song);
-    audio.src = song.audioUrl;
+    setWallpaper(entry.illustration);
+    audio.src = entry.audioUrl;
   }
-
   audio.play().catch(() => {});
   state.isPlaying = true;
   updateUI();
@@ -142,7 +136,8 @@ function nextSong() {
     state.currentIndex++;
   } else {
     const song = selectRandomUnplayedSong();
-    state.history.push(song);
+    // Attach a shuffled illustration at the moment the song enters history
+    state.history.push({ ...song, illustration: nextIllustration() });
     state.currentIndex++;
   }
   playSong(state.history[state.currentIndex]);
@@ -155,10 +150,7 @@ function previousSong() {
 }
 
 function togglePlayPause() {
-  if (state.currentIndex === -1) {
-    nextSong();
-    return;
-  }
+  if (state.currentIndex === -1) { nextSong(); return; }
   if (state.isPlaying) {
     audio.pause();
     state.isPlaying = false;
@@ -173,13 +165,11 @@ function togglePlayPause() {
 function updateUI() {
   iconPlay.style.display  = state.isPlaying ? "none"  : "block";
   iconPause.style.display = state.isPlaying ? "block" : "none";
-
-  const song = state.history[state.currentIndex];
-  if (song) {
-    elTitle.textContent  = song.title;
-    elArtist.textContent = song.artist;
+  const entry = state.history[state.currentIndex];
+  if (entry) {
+    elTitle.textContent  = entry.title;
+    elArtist.textContent = entry.artist;
   }
-
   btnPrev.disabled = state.currentIndex <= 0;
 }
 
@@ -229,8 +219,7 @@ document.addEventListener("keydown", (e) => {
 // ── Init ──────────────────────────────────────────────────────────────────────
 (function init() {
   btnPrev.disabled = true;
-  // Show the wallpaper immediately on load (first song chosen at random)
-  const first = selectRandomUnplayedSong();
-  const src = isMobile() ? first.illustrationMobile : first.illustrationDesktop;
-  wallpaper.style.backgroundImage = `url("${src}")`;
+  // Show a random illustration immediately so the page isn't blank on load
+  const first = shuffledIllustrations[0];
+  wallpaperEl.style.backgroundImage = `url("${illusSrc(first)}")`;
 })();
