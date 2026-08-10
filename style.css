@@ -235,8 +235,8 @@ html, body {
 
   /* Always show thumb on mobile — no hover state */
   .progress-thumb {
-    width: 18px;
-    height: 18px;
+    width: 12px;
+    height: 12px;
     transform: translate(-50%, -50%) scale(1);
   }
 
