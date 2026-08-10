@@ -222,18 +222,6 @@ html, body {
     font-size: 1.2rem;
   }
 
-  /* Larger tap target, same visual thickness as desktop */
-  .progress-bar {
-    height: 3px;
-    padding: 10px 0;
-    margin: -10px 0;
-    background-clip: content-box;
-  }
-
-  .progress-fill {
-    height: 3px;
-  }
-
   /* Always show thumb on mobile — no hover state */
   .progress-thumb {
     width: 12px;
