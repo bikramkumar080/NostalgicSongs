@@ -61,7 +61,7 @@ const bus = { desktop: "assets/illustrations/illus-kerala-bus-desktop.png", mobi
 
 const moods = [
   { id: "rainy-window",  emoji: "🌧️", name: "Rainy Window",   tagline: "Songs for quiet moments",       scene: "scene-rain",     wallpaper: null },
-  { id: "long-road",     emoji: "🛣️", name: "Long Road",      tagline: "For roads that don't need maps", scene: "scene-road",     wallpaper: null },
+  { id: "long-road",     emoji: "🛣️", name: "Long Road",      tagline: "For roads that don't need maps", scene: "scene-road",     wallpaper: { desktop: "assets/illustrations/illus-kerala-bus-desktop.png", mobile: "assets/illustrations/illus-kerala-bus-mobile.png" } },
   { id: "take-me-back",  emoji: "📼", name: "Take Me Back",    tagline: "90s & early 2000s nostalgia",    scene: "scene-retro",    wallpaper: null },
   { id: "lets-party",    emoji: "🕺", name: "Let's Party",     tagline: "Turn it up",                     scene: "scene-party",    wallpaper: { desktop: "assets/illustrations/Party desktop.png", mobile: "assets/illustrations/Party mobile.png" } },
   { id: "falling-love",  emoji: "❤️", name: "Falling in Love", tagline: "Songs that feel like memories",  scene: "scene-love",     wallpaper: null },
