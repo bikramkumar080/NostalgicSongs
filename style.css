@@ -406,6 +406,8 @@ body {
   .mood-card {
     min-height: 118px;
     padding: 0.8rem 0.85rem 0.9rem;
+    backdrop-filter: blur(3px) saturate(150%);
+    -webkit-backdrop-filter: blur(3px) saturate(150%);
   }
 
   .mood-card-emoji { font-size: 1.35rem; }
