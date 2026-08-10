@@ -222,15 +222,15 @@ html, body {
     font-size: 1.2rem;
   }
 
-  /* Taller tap target without changing visual bar height */
+  /* Larger tap target, same visual thickness as desktop */
   .progress-bar {
-    height: 6px;
+    height: 3px;
     padding: 10px 0;
     margin: -10px 0;
   }
 
   .progress-fill {
-    height: 6px;
+    height: 3px;
   }
 
   /* Always show thumb on mobile — no hover state */
