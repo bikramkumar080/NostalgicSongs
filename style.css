@@ -433,7 +433,7 @@ body {
     justify-content: center;
     background-image: url('assets/illustrations/Landing mobile.png');
     background-size: 100% auto;
-    background-position: center top;
+    background-position: center -6vh;
     background-repeat: no-repeat;
     padding: 0 1rem 2rem;
   }
@@ -457,12 +457,23 @@ body {
   .mood-card-tagline { font-size: 0.72rem; }
 
   .player {
-    padding: 4.4rem 1.5rem 2.5rem;
-    gap: 1.6rem;
+    padding: 1.5rem 1.5rem 2.5rem;
+    gap: 1.2rem;
   }
 
-  .back-btn { font-size: 0.66rem; padding: 0.4rem 0.75rem; }
-  .current-mood { top: 2.5rem; padding: 0.35rem 0.8rem; }
+  /* stack header pills in normal flow on mobile — no overlap */
+  .back-btn {
+    position: static;
+    align-self: flex-start;
+    font-size: 0.66rem;
+    padding: 0.4rem 0.75rem;
+  }
+  .current-mood {
+    position: static;
+    transform: none;
+    align-self: flex-start;
+    padding: 0.35rem 0.8rem;
+  }
   .current-mood-name { font-size: 0.66rem; }
 
   .song-title {
