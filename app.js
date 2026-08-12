@@ -60,13 +60,13 @@ const songs = [
 const bus = { desktop: "assets/illustrations/illus-kerala-bus-desktop.png", mobile: "assets/illustrations/illus-kerala-bus-mobile.png" };
 
 const moods = [
-  { id: "rainy-window",  emoji: "🌧️", name: "Rainy Window",   tagline: "Songs for quiet moments",       scene: "scene-rain",     wallpaper: null },
+  { id: "rainy-window",  emoji: "🌧️", name: "Rainy Window",   tagline: "Songs for quiet moments",       scene: "scene-rain",     wallpaper: { desktop: "assets/illustrations/Rainy.png", mobile: "assets/illustrations/Rainy.png" } },
   { id: "long-road",     emoji: "🛣️", name: "Long Road",      tagline: "For roads that don't need maps", scene: "scene-road",     wallpaper: { desktop: "assets/illustrations/illus-kerala-bus-desktop.png", mobile: "assets/illustrations/illus-kerala-bus-mobile.png" } },
-  { id: "take-me-back",  emoji: "📼", name: "Take Me Back",    tagline: "90s & early 2000s nostalgia",    scene: "scene-retro",    wallpaper: null },
+  { id: "take-me-back",  emoji: "📼", name: "Take Me Back",    tagline: "90s & early 2000s nostalgia",    scene: "scene-retro",    wallpaper: { desktop: "assets/illustrations/90's.png", mobile: "assets/illustrations/90's.png" } },
   { id: "lets-party",    emoji: "🕺", name: "Let's Party",     tagline: "Turn it up",                     scene: "scene-party",    wallpaper: { desktop: "assets/illustrations/Party desktop.png", mobile: "assets/illustrations/Party mobile.png" } },
-  { id: "falling-love",  emoji: "❤️", name: "Falling in Love", tagline: "Songs that feel like memories",  scene: "scene-love",     wallpaper: null },
-  { id: "after-midnight",emoji: "🌙", name: "After Midnight",  tagline: "For thoughts that stay late",    scene: "scene-midnight", wallpaper: null },
-  { id: "city-lights",   emoji: "🌆", name: "City Lights",     tagline: "English pop & night-drive vibes", scene: "scene-city",    wallpaper: null },
+  { id: "falling-love",  emoji: "❤️", name: "Falling in Love", tagline: "Songs that feel like memories",  scene: "scene-love",     wallpaper: { desktop: "assets/illustrations/Romantic.png", mobile: "assets/illustrations/Romantic.png" } },
+  { id: "after-midnight",emoji: "🌙", name: "After Midnight",  tagline: "For thoughts that stay late",    scene: "scene-midnight", wallpaper: { desktop: "assets/illustrations/Midnight.png", mobile: "assets/illustrations/Midnight.png" } },
+  { id: "city-lights",   emoji: "🌆", name: "City Lights",     tagline: "English pop & night-drive vibes", scene: "scene-city",    wallpaper: { desktop: "assets/illustrations/CityLights.png", mobile: "assets/illustrations/CityLights.png" } },
   { id: "surprise",      emoji: "🎲", name: "Surprise Me",     tagline: "I don't know what I want",       scene: "scene-surprise", wallpaper: null, surprise: true },
 ];
 
