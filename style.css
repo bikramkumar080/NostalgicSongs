@@ -71,9 +71,9 @@ body {
   text-align: left;
   color: #fdfaf3;
   font-family: inherit;
-  /* clear neutral glass — colour comes only as a faint tint below */
-  background: rgba(255,255,255,0.02);
-  border: 1px solid rgba(255,255,255,0.22);
+  /* white frosted glass fill (colour tint layers on top via .scene-*) */
+  background-color: rgba(255,255,255,0.32);
+  border: 1px solid rgba(255,255,255,0.5);
   backdrop-filter: blur(2px) saturate(150%);
   -webkit-backdrop-filter: blur(2px) saturate(150%);
   box-shadow:
@@ -138,16 +138,16 @@ body {
   line-height: 1.35;
 }
 
-/* ── scenes (semi-transparent gradient tints — landing image shows through) ── */
-.scene-rain     { background: linear-gradient(150deg, rgba(58,74,92,0.05) 0%, rgba(86,107,125,0.05) 55%, rgba(125,148,164,0.05) 100%); }
-.scene-road     { background: linear-gradient(150deg, rgba(107,127,78,0.05) 0%, rgba(156,175,106,0.05) 50%, rgba(216,196,138,0.05) 100%); }
-.scene-retro    { background: linear-gradient(150deg, rgba(122,74,52,0.05) 0%, rgba(176,113,74,0.05) 55%, rgba(217,168,106,0.05) 100%); }
-.scene-party    { background: linear-gradient(150deg, rgba(106,47,92,0.05) 0%, rgba(176,66,106,0.05) 50%, rgba(232,137,74,0.05) 100%); }
-.scene-love     { background: linear-gradient(150deg, rgba(138,58,90,0.05) 0%, rgba(198,106,118,0.05) 50%, rgba(240,168,120,0.05) 100%); }
-.scene-midnight { background: linear-gradient(150deg, rgba(30,36,64,0.05) 0%, rgba(53,64,107,0.05) 55%, rgba(90,95,140,0.05) 100%); }
-.scene-city     { background: linear-gradient(150deg, rgba(36,26,58,0.05) 0%, rgba(74,58,114,0.05) 50%, rgba(138,90,160,0.05) 100%); }
+/* ── scenes (colour tint layered over the white glass fill) ── */
+.scene-rain     { background-image: linear-gradient(150deg, rgba(58,74,92,0.05) 0%, rgba(86,107,125,0.05) 55%, rgba(125,148,164,0.05) 100%); }
+.scene-road     { background-image: linear-gradient(150deg, rgba(107,127,78,0.05) 0%, rgba(156,175,106,0.05) 50%, rgba(216,196,138,0.05) 100%); }
+.scene-retro    { background-image: linear-gradient(150deg, rgba(122,74,52,0.05) 0%, rgba(176,113,74,0.05) 55%, rgba(217,168,106,0.05) 100%); }
+.scene-party    { background-image: linear-gradient(150deg, rgba(106,47,92,0.05) 0%, rgba(176,66,106,0.05) 50%, rgba(232,137,74,0.05) 100%); }
+.scene-love     { background-image: linear-gradient(150deg, rgba(138,58,90,0.05) 0%, rgba(198,106,118,0.05) 50%, rgba(240,168,120,0.05) 100%); }
+.scene-midnight { background-image: linear-gradient(150deg, rgba(30,36,64,0.05) 0%, rgba(53,64,107,0.05) 55%, rgba(90,95,140,0.05) 100%); }
+.scene-city     { background-image: linear-gradient(150deg, rgba(36,26,58,0.05) 0%, rgba(74,58,114,0.05) 50%, rgba(138,90,160,0.05) 100%); }
 .scene-surprise {
-  background: linear-gradient(135deg, rgba(138,90,42,0.06) 0%, rgba(185,138,74,0.06) 50%, rgba(216,176,106,0.06) 100%);
+  background-image: linear-gradient(135deg, rgba(138,90,42,0.06) 0%, rgba(185,138,74,0.06) 50%, rgba(216,176,106,0.06) 100%);
 }
 
 /* ════════════════════════════════════════
@@ -431,7 +431,7 @@ body {
   .landing {
     align-items: flex-start;
     justify-content: center;
-    background-image: url('assets/illustrations/Landing.png');
+    background-image: url('assets/illustrations/Landing mobile.png');
     background-size: 100% auto;
     background-position: center top;
     background-repeat: no-repeat;
