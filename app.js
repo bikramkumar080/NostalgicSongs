@@ -137,6 +137,8 @@ const btnPrev       = document.getElementById("btn-prev");
 const btnNext       = document.getElementById("btn-next");
 const btnBack       = document.getElementById("btn-back");
 const backLabel     = document.getElementById("back-label");
+const currentMoodEmoji = document.getElementById("current-mood-emoji");
+const currentMoodName  = document.getElementById("current-mood-name");
 const iconPlay      = btnPlay.querySelector(".icon-play");
 const iconPause     = btnPlay.querySelector(".icon-pause");
 
@@ -203,7 +205,8 @@ function enterMood(mood) {
   state.currentIndex = -1;
   state.isPlaying = false;
 
-  backLabel.textContent = chosen.name;
+  currentMoodEmoji.textContent = chosen.emoji;
+  currentMoodName.textContent  = chosen.name;
   elTitle.textContent  = "Press play";
   elArtist.textContent = "to begin the journey";
   btnPrev.disabled = true;
