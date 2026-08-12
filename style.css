@@ -457,9 +457,13 @@ body {
   .mood-card-tagline { font-size: 0.72rem; }
 
   .player {
-    padding: 1.5rem 1.5rem 2.5rem;
+    padding: 4.4rem 1.5rem 2.5rem;
     gap: 1.6rem;
   }
+
+  .back-btn { font-size: 0.66rem; padding: 0.4rem 0.75rem; }
+  .current-mood { top: 2.5rem; padding: 0.35rem 0.8rem; }
+  .current-mood-name { font-size: 0.66rem; }
 
   .song-title {
     font-size: 1.2rem;
